@@ -1,0 +1,30 @@
+import random
+
+def gerar_entradas_txt(nome_arquivo, num_casos, n_min, n_max, val_max, garantir_solucao): 
+    with open(nome_arquivo, 'w', encoding='utf-8') as f:
+        for i in range(num_casos):
+            n = random.randint(n_min, n_max)
+            
+            numeros = [random.randint(1, val_max) for _ in range(n)]
+            
+            soma_total = sum(numeros)
+            if garantir_solucao:
+                qtd_elementos_alvo = random.randint(1, n)
+                subconjunto_teste = random.sample(numeros, qtd_elementos_alvo)
+                alvo = sum(subconjunto_teste)
+            else:
+                soma_total = sum(numeros)
+                alvo = random.randint(1, soma_total) if soma_total > 0 else 0
+
+            f.write(f"{alvo}\n")
+            f.write(" ".join(map(str, numeros)) + "\n")
+            f.write("---\n")
+            
+    print(f"Arquivo '{nome_arquivo}' gerado com sucesso contendo {num_casos} casos.")
+
+
+gerar_entradas_txt("Input/small_input.txt", 10, 5, 10, 100, True)
+
+gerar_entradas_txt("Input/med_input.txt", 10, 11, 19, 500, True)
+
+gerar_entradas_txt("Input/big_input.txt", 10, 20, 25, 1000, True)
