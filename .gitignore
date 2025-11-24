@@ -1,0 +1,33 @@
+# --- Solicitações Específicas ---
+/bin/
+/Java/oracleJdk-25/
+
+# --- Java ---
+*.class
+*.log
+*.jar
+*.war
+# Pasta de build do Maven (criada pelo pom.xml)
+target/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+# Ambientes virtuais (se você vier a criar um)
+.venv/
+venv/
+env/
+
+# --- Excel (Arquivos temporários de bloqueio) ---
+# Importante pois seu código manipula Excel e cria arquivos temporários ~$
+~$*.xlsx
+
+# --- IDE / Editor (VS Code, Eclipse, IntelliJ) ---
+.vscode/
+.idea/
+.settings/
+.classpath
+.project
+*.swp
+.DS_Store
+Thumbs.db
