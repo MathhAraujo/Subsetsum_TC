@@ -15,11 +15,14 @@ Este projeto compara a performance de execução do algoritmo **Subset Sum** (So
 ├── pom.xml             # Configuração Maven (Dependências Java)
 └── README.md           # Este arquivo
 
-🚀 Pré-requisitos🐍 PythonPython 3.8+ instalado.Bibliotecas necessárias para manipulação de Excel:
+🚀 Pré-requisitos🐍 PythonPython 3.8+ instalado.
+
+Bibliotecas necessárias para manipulação de Excel:
 
 pip install pandas openpyxl
 
-☕ JavaJDK 8 ou superior instalado.VS Code com o Extension Pack for Java (recomendado).O arquivo pom.xml na raiz garante o download automático da biblioteca Apache POI (necessária para escrever no Excel).
+☕ JavaJDK 8 ou superior instalado.VS Code com o Extension Pack for Java (recomendado).
+O arquivo pom.xml na raiz garante o download automático da biblioteca Apache POI (necessária para escrever no Excel).
 
 1️⃣ Criando ou Editando Entradas (Inputs)Os arquivos de entrada devem estar na pasta Input/ (ex: small_input.txt).Cada caso de teste dentro do arquivo segue estritamente este formato de 3 linhas:
 
@@ -35,10 +38,24 @@ Exemplo de conteúdo:
 10 20 30 40 50
 ---
 
-2️⃣ Executando a Versão em PythonA partir da raiz do projeto, execute o comando:Bashpython Python/subsetsum.py
-O script processará os arquivos definidos (small, med, big) na pasta Input.Criará (ou atualizará) o arquivo Results/results.xlsx.Os tempos são calculados e salvos em milissegundos (ms).
+2️⃣ Executando a Versão em Python
 
-3️⃣ Executando a Versão em JavaO projeto está configurado como um projeto Maven. Certifique-se de que o VS Code tenha baixado as dependências do pom.xml antes de rodar.Via VS Code (Recomendado)Abra a pasta raiz do projeto no VS Code.Abra o arquivo Java/SubsetSum.java.Pressione F5 (ou clique em "Run").Via Terminal (Maven)Se preferir rodar via linha de comando:
+A partir da raiz do projeto, execute o comando:
+
+Bashpython Python/subsetsum.py
+
+O script processará os arquivos definidos (small, med, big) na pasta Input.
+Criará (ou atualizará) o arquivo Results/results.xlsx.
+Os tempos são calculados e salvos em milissegundos (ms).
+
+3️⃣ Executando a Versão em Java
+
+O projeto está configurado como um projeto Maven.
+Certifique-se de que o VS Code tenha baixado as dependências do pom.xml antes de rodar.
+Via VS Code (Recomendado)Abra a pasta raiz do projeto no VS Code.
+Abra o arquivo Java/SubsetSum.java.Pressione F5 (ou clique em "Run").
+
+Via Terminal (Maven)Se preferir rodar via linha de comando:
 
 mvn clean install
 mvn exec:java -Dexec.mainClass="Java.SubsetSum"
